@@ -1,0 +1,129 @@
+
+.imgContainer {
+  img {
+    width: min-content;
+    margin-bottom: 40px;
+  }
+}
+.welcomeText {
+  //   font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 42px;
+  line-height: 58px;
+  /* identical to box height, or 138% */
+
+  /* Navy/600 */
+
+  color: #17153a;
+  img {
+    width: 40%;
+  }
+}
+.formContainer {
+  width: 50%;
+  & > span {
+    // font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 32px;
+    color: #747389;
+  }
+
+  & > h4 {
+    // font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #454461;
+  }
+  .googleConnectContainer {
+    img{
+      background: white;
+      padding: 5px;
+      border-radius: 10px;
+      width: 36px;
+      margin-right: 15px;
+    }
+    background: #1a73e8;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    margin: 40px 0 40px 0;
+  }
+  .or {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #d1d0d8;
+    line-height: 0.1em;
+    margin: 30px 0 30px 0px;
+    span {
+      background: #fff;
+      padding: 6px 28px 6px 28px;
+      color: #d1d0d8;
+      font-size: 26px;
+      font-weight: bold;
+    }
+  }
+  .formGroup {
+    & > div:first-child {
+      margin-bottom: 20px;
+    }
+    label {
+      color: #17153a;
+      font-weight: bold;
+    }
+    input {
+      margin-top: 10px;
+      padding: 16px 20px 16px 26px;
+      background: #f4f4f5;
+      border: 1px solid #a2a1b0;
+      border-radius: 0px;
+    }
+    .passwordInput{
+      position: relative;
+      i{
+        position: absolute;
+        top: 37%;
+        right: 20px;
+      color: #a2a1b0;
+      cursor: pointer;
+
+      }
+    }
+    input:focus {
+      outline: none;
+      box-shadow: none;
+    }
+    input::placeholder {
+      color: #a2a1b0;
+    }
+  }
+  .save{
+    margin-top: 20px;
+    button{
+      width: 100%;
+      background: #17153A;
+      color: white;
+      border-radius: 0;
+      font-weight: bold;
+      padding: 14px;
+      font-size: 16px;
+    }
+  }
+  .signUp{
+    cursor: pointer;
+    color: #a2a1b0;
+    font-weight: bold;
+    strong{
+      color: #17153A; 
+    }
+}
+}
+.googleLogin{
+  background: #17153A;
+}

@@ -1,0 +1,101 @@
+<div class="container-fluid">
+  <div class="row text-center">
+    <div class="col imgContainer">
+      <img src="/assets/imgs/Waggeh_Logo.png" class="float-start" alt="..." />
+    </div>
+    <div class="col"></div>
+  </div>
+  <div class="row justify-content-md-center">
+    <div class="col-md-auto formContainer">
+      <h3 class="welcomeText">
+        Welcome back to <img src="/assets/imgs/Waggeh_Logo.png" />
+      </h3>
+      <span
+        >Connect to our community of consultant and business owners, to</span
+      >
+      <h4>
+        empower your consultancy career with our virtual consultancy service
+      </h4>
+      <div class="googleConnectContainer">
+        <!-- <img src="/assets/imgs/google.png" /> -->
+        <button class="btn btn-lg" >
+          
+          <asl-google-signin-button type='standard' theme="filled_blue" text="signin_with" size='large' logo_alignment="left" >     </asl-google-signin-button>
+        </button>
+        <!-- <div #g_id_onload id="g_id_onload"
+        data-client_id="646366541660-sk9ooceifkjefbpqvmfpe9jcc5ld2ip5.apps.googleusercontent.com"
+        data-context="use"
+        data-ux_mode="redirect"
+        data-login_uri="http://localhost:4200"
+        data-nonce=""
+        data-auto_prompt="false">
+   </div>
+   
+   <div #g_id_onload class="g_id_signin"
+        data-type="standard"
+        data-shape="pill"
+        data-theme="filled_blue"
+        data-text="continue_with"
+        data-size="large"
+        data-logo_alignment="left"
+        data-width="600px">
+   </div> -->
+        <!-- Continue with Google -->
+      </div>
+      <div class="or"><span>OR</span></div>
+      <form [formGroup]="loginForm">
+        <div class="formGroup">
+          <div>
+            <label for="email">Email address</label>
+            <input
+              type="text"
+              id="email"
+              [(ngModel)]="email"
+              class="form-control"
+              placeholder="Your email address"
+              formControlName="email"
+  
+              aria-describedby="basic-addon3"
+            />
+            <span class="text-danger mt-1 d-block"
+            *ngIf="(loginFormControl.email.touched || submitted) && loginFormControl.email.errors?.required">
+            Email is required
+        </span>
+          </div>
+          <label class="mt-2" for="password">Password</label>
+          <div class="passwordInput">
+            <input
+              type="password"
+              [type]="showPass ? 'text' : 'password'"
+              class="form-control"
+              [(ngModel)]="password"
+              formControlName="password"
+              placeholder="Password"
+              aria-describedby="basic-addon3"
+            />
+            <i
+              (click)="showPass = !showPass"
+              [class]="showPass ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
+            ></i>
+          </div>
+          
+          <span class="text-danger mt-1 d-block"
+          *ngIf="(loginFormControl.password.touched || submitted) && loginFormControl.password.errors?.required">
+          Password is required
+      </span>
+          <div class="save">
+            <button (click)="login()"  type="button" class="btn btn-lg btn-block">
+              Login
+            </button>
+          </div>
+          <div class="text-center mt-4 signUp" routerLink="/login/continueSignUp">
+            <span 
+              >Don't have an account ? <strong>Sign up</strong> </span
+            >
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>

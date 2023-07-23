@@ -1,0 +1,180 @@
+.mat-stepper-horizontal {
+    margin-top: 8px;
+    position: relative;
+    height: auto;
+    display: block;
+  }
+  
+  .mat-mdc-form-field {
+    margin-top: 16px;
+  }
+  .continueButton{
+    background: #17153A;
+    color: white !important;
+    padding: 25px 35px;
+
+  }
+  .welcomeText {
+    //   font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 42px;
+    line-height: 58px;
+    /* identical to box height, or 138% */
+  
+    /* Navy/600 */
+  
+    color: #17153a;
+    img {
+      width: 40%;
+    }
+  }
+  .googleConnectContainer {
+    img{
+      background: white;
+      padding: 5px;
+      border-radius: 10px;
+      width: 36px;
+      margin-right: 15px;
+    }
+    background: #1a73e8;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    margin: 40px 0 40px 0;
+  }
+  .googleCotaier{
+   margin: 0px 25px; 
+  }
+  
+  .or {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #d1d0d8;
+    line-height: 0.1em;
+    margin: 30px 0 30px 0px;
+    span {
+      background: #fff;
+      padding: 6px 28px 6px 28px;
+      color: #d1d0d8;
+      font-size: 26px;
+      font-weight: bold;
+    }
+  }
+  .backButton{
+    color: black !important;
+
+    // background: #17153A;
+  }
+  label{
+    color: var(--main-text-color);
+  }
+  .uploadFileImgContainer{
+    width: 90px;
+    height: 90px;
+    background: #A2A1B0;
+    // padding: 12px;
+    border-radius: 50%;
+    img{
+      width: 70px;
+      border-radius: 50%;
+      height: 70px;
+      margin-left: -2px;
+
+    }
+ 
+  }
+  ::ng-deep{
+    .ng-select.ng-select-single .ng-select-container{
+      height: 50px;
+      background: #F4F4F5;
+    }
+    .mat-mdc-button[disabled][disabled]{
+      cursor: not-allowed;
+      pointer-events: auto !important;
+    }
+    .mat-horizontal-stepper-wrapper{
+      min-height: 300px;
+    height: 300px;
+    }
+    .mat-horizontal-content-container{
+      overflow: unset !important;
+      height: auto ;
+    }
+    .mat-horizontal-stepper-header-container{
+      display: none !important;
+    }
+    .mat-mdc-button.mat-mdc-button-base{
+      float: right;
+      margin-top: 32px;
+    }
+    .mat-horizontal-stepper-wrapper,.mat-stepper-horizontal, .mat-stepper-vertical{
+      background: white;
+    }
+    
+  }
+mat-label{
+  color: var(--main-text-color);
+  font-weight: bold;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+}
+ng-select{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+  .imgContainer {
+    img {
+      width: min-content;
+      margin-bottom: 40px;
+    }
+  }
+  .progressBarParent{
+    padding: 0 37px 44px 34px;
+  }
+  .progress{
+    height: 7px;
+  .progress-bar{
+    background-color: #17153a;
+    margin-left: -13px;
+  }
+  }
+  
+
+  .formGroup {
+  
+    label {
+      color: #17153a;
+      font-weight: bold;
+      margin-top: 10px;
+
+    }
+    input {
+      margin-top: 10px;
+      padding: 16px 20px 16px 26px;
+      background: #f4f4f5;
+      border: 1px solid #a2a1b0;
+      border-radius: 0px;
+    }
+    .passwordInput{
+      position: relative;
+      i{
+        position: absolute;
+        top: 37%;
+        right: 20px;
+      color: #a2a1b0;
+      cursor: pointer;
+
+      }
+    }
+    input:focus {
+      outline: none;
+      box-shadow: none;
+    }
+    input::placeholder {
+      color: #a2a1b0;
+    }
+  }

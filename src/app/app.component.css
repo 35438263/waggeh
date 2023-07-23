@@ -1,0 +1,225 @@
+.consultant-profile {
+  height: 1000px;
+  width: 1440px;
+  background-color: #ffffff;
+}
+
+.img-1 {
+  height: 64px;
+  width: 201px;
+}
+
+.group-9-1 {
+  height: 124px;
+  width: 586px;
+}
+
+.text-2 {
+  text-align: left;
+  vertical-align: top;
+  font-size: 42px;
+  font-family: Poppins;
+  line-height: 58%;
+  color: #17153a;
+}
+
+.group-9-3 {
+  height: 52px;
+  width: 586px;
+}
+
+.rectangle-3-7 {
+  height: 3px;
+  width: 581px;
+  background-color: #ece71c;
+}
+
+.text-3 {
+  text-align: left;
+  vertical-align: top;
+  font-size: 16px;
+  font-family: undefined;
+  line-height: undefined;
+}
+
+.img-4 {
+  height: 58px;
+  width: 181px;
+}
+
+.frame-7-5 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 19px 196px;
+  gap: 36px;
+  background-color: #4285f4;
+}
+
+.google {
+  border-radius: 8px;
+  height: 38px;
+  width: 38px;
+  background-color: #ffffff;
+}
+
+.text-5 {
+  text-align: center;
+  vertical-align: top;
+  font-size: 16px;
+  font-family: Poppins;
+  line-height: auto;
+  color: #ffffff;
+}
+
+.group-9-2 {
+  height: 34px;
+  width: 578px;
+}
+
+.text-6 {
+  text-align: center;
+  vertical-align: top;
+  font-size: 26px;
+  font-family: Poppins;
+  line-height: 34%;
+  color: #d1d0d8;
+}
+
+.text-7 {
+  text-align: center;
+  vertical-align: top;
+  font-size: 16px;
+  font-family: Poppins;
+  line-height: 24%;
+  color: #17153a;
+}
+
+.text-8 {
+  text-align: left;
+  vertical-align: top;
+  font-size: 16px;
+  font-family: Poppins;
+  line-height: 24%;
+  color: #17153a;
+}
+
+.frame-9-3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 35px;
+  gap: 10px;
+  background-color: #f4f4f5;
+  border: 1px solid #a2a1b0;
+}
+
+.text-9 {
+  text-align: center;
+  vertical-align: top;
+  font-size: 16px;
+  font-family: Poppins;
+  line-height: 24%;
+  color: #a2a1b0;
+}
+
+.frame-9-5 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  gap: 370px;
+  background-color: #f4f4f5;
+  border: 1px solid #a2a1b0;
+}
+
+.group-1-0-0 {
+  height: 8px;
+  width: 120px;
+}
+
+.ellipse-1 {
+  height: 8px;
+  width: 8px;
+}
+
+.ellipse-3 {
+  height: 8px;
+  width: 8px;
+}
+
+.ellipse-5 {
+  height: 8px;
+  width: 8px;
+}
+
+.ellipse-7 {
+  height: 8px;
+  width: 8px;
+}
+
+.ellipse-2 {
+  height: 8px;
+  width: 8px;
+}
+
+.ellipse-4 {
+  height: 8px;
+  width: 8px;
+}
+
+.ellipse-6 {
+  height: 8px;
+  width: 8px;
+}
+
+.ellipse-8 {
+  height: 8px;
+  width: 8px;
+}
+
+.vuesax-lineareye {
+  height: 24px;
+  width: 24px;
+  background-color: #ffffff;
+}
+
+.vuesax-lineareye {
+  height: 24px;
+  width: 24px;
+}
+
+.img-1-0 {
+  height: 24px;
+  width: 24px;
+}
+
+.frame-9-4 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 35px;
+  gap: 10px;
+  background-color: #17153a;
+}
+
+.text-1-1 {
+  text-align: center;
+  vertical-align: top;
+  font-size: 16px;
+  font-family: Poppins;
+  line-height: 24%;
+  color: #ffffff;
+}
+
+.text-1-2 {
+  text-align: center;
+  vertical-align: top;
+  font-size: 16px;
+  font-family: Poppins;
+  line-height: 24%;
+}/*# sourceMappingURL=app.component.css.map */

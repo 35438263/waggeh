@@ -1,0 +1,401 @@
+<div class="row text-center">
+  <div class="col imgContainer">
+    <img src="/assets/imgs/Waggeh_Logo.png" class="float-start" alt="..." />
+  </div>
+  <div class="col"></div>
+</div>
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+    <div class="row progressBarParent">
+      <div class="progress">
+        <div
+          class="progress-bar"
+          role="progressbar"
+          [style.width.%]="progressBarWidth"
+          aria-valuenow="50"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        ></div>
+      </div>
+    </div>
+    <div class="googleCotaier">
+      <h4>Step {{ stepper.selectedIndex + 1 }} of 4</h4>
+    </div>
+
+    <mat-stepper [linear]="isLinear" class="formGroup" #stepper>
+      <mat-step>
+        <div class="googleConnectContainer">
+          <button #g_id_onload class="btn btn-lg">
+            <asl-google-signin-button
+              type="standard"
+              theme="filled_blue"
+              text="signin_with"
+              size="large"
+              logo_alignment="left"
+            >
+            </asl-google-signin-button>
+          </button>
+          <!-- <img src="/assets/imgs/google.png" />
+          Continue with Google -->
+        </div>
+        <div class="or"><span>OR</span></div>
+        <form [formGroup]="FormGroup">
+          <div class="row">
+            <div class="col-md-6">
+              <label for="firstName">First name</label>
+              <input
+                type="text"
+                id="firstName"
+                [(ngModel)]="userInfo.firstName"
+                class="form-control"
+                placeholder="First name"
+                aria-describedby="basic-addon3"
+                formControlName="firstName"
+              />
+              <span
+                class="text-danger mt-1 d-block"
+                *ngIf="
+                  (FormGroupControls.firstName.touched || submitted) &&
+                  FormGroupControls.firstName.errors?.required
+                "
+              >
+                First name is required
+              </span>
+            </div>
+            <div class="col-md-6">
+              <label for="lastName">Last name</label>
+              <input
+                type="text"
+                id="lastName"
+                [(ngModel)]="userInfo.lastName"
+                class="form-control"
+                placeholder="Last name"
+                formControlName="lastName"
+                aria-describedby="basic-addon3"
+              />
+              <span
+                class="text-danger mt-1 d-block"
+                *ngIf="
+                  (FormGroupControls.lastName.touched || submitted) &&
+                  FormGroupControls.lastName.errors?.required
+                "
+              >
+                Last name is required
+              </span>
+            </div>
+            <div class="col-md-12">
+              <label for="email">Email</label>
+              <input
+                type="text"
+                id="email"
+                [(ngModel)]="userInfo.email"
+                class="form-control"
+                placeholder="Your email address"
+                aria-describedby="basic-addon3"
+                pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,6})+$"
+                formControlName="email"
+              />
+              <span
+                class="text-danger mt-1 d-block"
+                *ngIf="
+                  (FormGroupControls.email.touched || submitted) &&
+                  FormGroupControls.email.errors?.required
+                "
+              >
+                Email is required
+              </span>
+              <span
+                class="text-danger mt-1 d-block"
+                *ngIf="
+                  (FormGroupControls.email.touched || submitted) &&
+                  FormGroupControls.email.errors?.pattern
+                "
+              >
+                Invalid email
+              </span>
+            </div>
+            <div class="col-md-12">
+              <label for="password">Password</label>
+              <div class="passwordInput">
+                <input
+                  id="password"
+                  type="password"
+                  [type]="showPass ? 'text' : 'password'"
+                  class="form-control"
+                  [(ngModel)]="userInfo.password"
+                  placeholder="Password"
+                  aria-describedby="basic-addon3"
+                  formControlName="password"
+                />
+
+                <i
+                  (click)="showPass = !showPass"
+                  [class]="
+                    showPass ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'
+                  "
+                ></i>
+              </div>
+              <span
+                class="text-danger mt-1 d-block"
+                *ngIf="
+                  (FormGroupControls.password.touched || submitted) &&
+                  FormGroupControls.password.errors?.required
+                "
+              >
+                Password is required
+              </span>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-2">
+              <button
+                
+              routerLink="/login"
+                class="backButton"
+                mat-button
+                matStepperPrevious
+              >
+                Back
+              </button>
+            </div>
+            <div class="col-md-7"></div>
+            <div class="col-md-3">
+              <button
+              [disabled]="firstStepDisabled"
+              (click)="changeStep()"
+                class="continueButton"
+                mat-button
+                matStepperNext
+              >
+                Continue
+              </button>
+            </div>
+          </div>
+        </form>
+        <!-- <form [formGroup]="secondFormGroup">
+          <mat-label>What is your business type?</mat-label>
+          <ng-select placeholder="Eg. Startup, Local brand, etc.">
+            <ng-option>Startup </ng-option>
+            <ng-option>Local brand </ng-option>
+          </ng-select>
+
+          <mat-label>What is your business category? *</mat-label>
+          <ng-select placeholder="Eg. Fashion, tech, etc.">
+            <ng-option>Fashion </ng-option>
+            <ng-option>tech </ng-option>
+          </ng-select>
+
+          <div class="row">
+            <div class="col-md-2">
+              <button
+                (click)="changeStep()"
+                class="backButton"
+                mat-button
+                matStepperPrevious
+              >
+                Back
+              </button>
+            </div>
+            <div class="col-md-7"></div>
+            <div class="col-md-3">
+              <button
+                (click)="changeStep()"
+                class="continueButton"
+                mat-button
+                matStepperNext
+              >
+                Continue
+              </button>
+            </div>
+          </div>
+        </form> -->
+      </mat-step>
+      <mat-step>
+        <form [formGroup]="FormGroup">
+          <!-- <ng-template matStepLabel>Fill out your name</ng-template> -->
+          <!-- <mat-form-field> -->
+          <mat-label>Upload profile picture</mat-label>
+          <div class="row mb-4 mt-4 mx-2">
+            <div class="col-md-4 uploadFileImgContainer">
+              <label for="file">
+                <img [src]="userImgUrl" />
+              </label>
+            </div>
+
+            <div class="col-md-4 d-flex align-items-center">
+              <label for="file"> Select a file</label>
+
+              <!-- <input type="file" accept=".jpg,.jpeg,.png" /> -->
+            </div>
+            <div class="col-md-4">
+              <input
+                type="file"
+                name="file"
+                (change)="onFileSelected($event)"
+                id="file"
+                class="inputfile"
+                style="opacity: 0"
+                accept="image/*"
+              />
+            </div>
+          </div>
+          <mat-label >Choose your gender</mat-label>
+          <ng-select
+            placeholder="Choose one"
+            [(ngModel)]="userInfo.gender"
+            formControlName="gender"
+          >
+            <ng-option value="male">Male </ng-option>
+            <ng-option value="female">Female </ng-option>
+          </ng-select>
+          <span
+          class="text-danger mt-1 d-block"
+          *ngIf="
+            (FormGroupControls.gender.touched || submitted) &&
+            FormGroupControls.gender.errors?.required
+          "
+        >
+        Gender is required
+        </span>
+          <mat-label class="mt-4 d-block">Select your country</mat-label>
+          <ng-select
+            [(ngModel)]="userInfo.nationality"
+            formControlName="country"
+            [items]="countries"
+            dropdownPosition="bottom"
+            [virtualScroll]="true"
+            bindLabel="name"
+            bindValue="name"
+          >
+            <!-- <ng-option *ngFor="let country of countries">{{ country.name }}</ng-option> -->
+          </ng-select>
+          <span
+          class="text-danger mt-1 d-block"
+          *ngIf="
+            (FormGroupControls.country.touched || submitted) &&
+            FormGroupControls.country.errors?.required
+          "
+        >
+        Country is required
+        </span>
+          <!-- <input  placeholder="Last name, First name" formControlName="firstCtrl" required> -->
+          <!-- </mat-form-field> -->
+          <div class="row">
+            <div class="col-md-2">
+              <button
+                (click)="changeStep()"
+                class="backButton"
+                matStepperPrevious
+                mat-button
+              >
+                Back
+              </button>
+            </div>
+            <div class="col-md-7"></div>
+            <div class="col-md-3">
+              <button
+              [disabled]="secondStepDisabled"
+
+                (click)="changeStep()"
+                class="continueButton"
+                mat-button
+                matStepperNext
+              >
+                Continue
+              </button>
+            </div>
+          </div>
+        </form>
+      </mat-step>
+
+      <mat-step>
+        <mat-label>What is your business type?</mat-label>
+        <ng-select
+          placeholder="Eg. Startup, Local brand, etc."
+          [(ngModel)]="userInfo.businessType"
+        >
+            <ng-option value="STARTUP">Startup</ng-option>
+            <ng-option value="LOCAL_BRAND">Local brand</ng-option>
+            <ng-option value="OTHER">Other</ng-option>
+          <!-- <ng-option>Local brand </ng-option> -->
+        </ng-select>
+        <mat-label>What is your business category?</mat-label>
+        <ng-select
+          placeholder="Eg. Startup, Local brand, etc."
+          [(ngModel)]="userInfo.field"
+        >
+          <ng-container *ngFor="let category of categories">
+            <ng-option [value]="category.id">{{
+              category.displayName
+            }}</ng-option>
+          </ng-container>
+          <!-- <ng-option>Local brand </ng-option> -->
+        </ng-select>
+        <!-- <ng-template matStepLabel>Done</ng-template> -->
+        <!-- <p>You are now done.</p> -->
+    
+
+        <div class="row">
+          <div class="col-md-2">
+            <button
+              (click)="changeStep()"
+              class="backButton"
+              mat-button
+              matStepperPrevious
+            >
+              Back
+            </button>
+          </div>
+          <div class="col-md-7"></div>
+          <div class="col-md-3">
+            <button
+
+              (click)="changeStep()"
+              class="continueButton"
+              mat-button
+              matStepperNext
+            >
+              Continue
+            </button>
+          </div>
+        </div>
+      </mat-step>
+      <mat-step>
+      
+        <mat-label>How would you like to be intro’d</mat-label>
+        <textarea
+          class="form-control mt-4"
+          placeholder="Tell us more about yourself, your experience, your goals. "
+          rows="5"     [(ngModel)]="userInfo.bio"
+        ></textarea>
+
+        <div class="row">
+          <div class="col-md-2">
+            <button
+              (click)="changeStep()"
+              class="backButton"
+              mat-button
+              matStepperPrevious
+            >
+              Back
+            </button>
+          </div>
+          <div class="col-md-7"></div>
+          <div class="col-md-3">
+            <button
+              (click)="submit()"
+              class="continueButton"
+              mat-button
+              matStepperNext
+            >
+              Save
+            </button>
+          </div>
+        </div>
+      </mat-step>
+    </mat-stepper>
+  </div>
+  <div class="col-md-3"></div>
+</div>

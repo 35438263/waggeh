@@ -1,0 +1,48 @@
+.imgContainer {
+  img {
+    width: min-content;
+    margin-bottom: 40px;
+  }
+}
+
+.header {
+  .login {
+    border: 1px solid #80808069;
+    padding: 15px 50px;
+    color: #17153a;
+    font-weight: bold;
+    border-radius: 8px;
+  }
+  .signUp {
+    padding: 15px 50px;
+    background: #17153a;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+  }
+}
+.search {
+    .col-md-10 div{
+        position: relative;
+    }
+  input {
+    padding: 20px 15px 20px 14%;
+    border-radius: 8px;
+  }
+  input::placeholder {
+    color: #a2a1b0;
+  }
+  img{
+    position: absolute;
+    width: 34px;
+    top: 22%;
+    left: 9%;
+  }
+  .filter{
+    padding: 20px 56px;
+    background: #17153a;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+  }
+}

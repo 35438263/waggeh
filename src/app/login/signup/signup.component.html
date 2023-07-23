@@ -1,0 +1,194 @@
+<!-- <div class="container-fluid"> -->
+<div class="row text-center">
+  <div class="col imgContainer">
+    <img src="/assets/imgs/Waggeh_Logo.png" class="float-start" alt="..." />
+  </div>
+  <div class="col"></div>
+</div>
+<div class="row justify-content-md-center">
+  <div class="col-md-auto formContainer">
+    <h1>consultant sign up</h1>
+    <div class="formGroup">
+      <mat-label>Upload profile picture</mat-label>
+      <div class="row mb-4 mt-4 mx-2">
+        <div class="col-md-4 uploadFileImgContainer">
+          <label for="file">
+            <img [src]="userImgUrl" />
+          </label>
+        </div>
+
+        <div class="col-md-4 d-flex align-items-center">
+          <label for="file"> Select a file</label>
+
+          <!-- <input type="file" accept=".jpg,.jpeg,.png" /> -->
+        </div>
+        <div class="col-md-4">
+          <input
+            type="file"
+            name="file"
+            (change)="onFileSelected($event)"
+            id="file"
+            class="inputfile"
+            style="opacity: 0"
+            accept="image/*"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <label for="firstName">title</label>
+          <input
+            type="text"
+            id="firstName"
+            [(ngModel)]="userInfo.title"
+            class="form-control"
+            placeholder="First name"
+            aria-describedby="basic-addon3"
+          />
+        </div>
+        <div class="col-md-6">
+          <label for="firstName">First name</label>
+          <input
+            type="text"
+            id="firstName"
+            [(ngModel)]="userInfo.firstName"
+            class="form-control"
+            placeholder="First name"
+            aria-describedby="basic-addon3"
+          />
+        </div>
+        <div class="col-md-6">
+          <label for="lastName">Last name</label>
+          <input
+            type="text"
+            id="lastName"
+            [(ngModel)]="userInfo.lastName"
+            class="form-control"
+            placeholder="Last name"
+            aria-describedby="basic-addon3"
+          />
+        </div>
+        <div class="col-md-12">
+          <label for="email">Email</label>
+          <input
+            type="text"
+            id="email"
+            [(ngModel)]="userInfo.email"
+            class="form-control"
+            placeholder="Your email address"
+            aria-describedby="basic-addon3"
+            pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,6})+$"
+          />
+        </div>
+        <div class="col-md-12">
+          <label for="password">Password</label>
+          <div class="passwordInput">
+            <input
+              id="password"
+              type="password"
+              [type]="showPass ? 'text' : 'password'"
+              class="form-control"
+              [(ngModel)]="userInfo.password"
+              placeholder="Password"
+              aria-describedby="basic-addon3"
+            />
+
+            <i
+              (click)="showPass = !showPass"
+              [class]="showPass ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"
+            ></i>
+          </div>
+        </div>
+        <label>Choose your gender</label>
+        <ng-select placeholder="Choose one" [(ngModel)]="userInfo.gender">
+          <ng-option value="male">Male </ng-option>
+          <ng-option value="female">Female </ng-option>
+        </ng-select>
+        <label>What is your business type?</label>
+        <ng-select
+          placeholder="Eg. Startup, Local brand, etc."
+          [(ngModel)]="userInfo.businessType"
+        >
+          <ng-option value="STARTUP">Startup</ng-option>
+          <ng-option value="LOCAL_BRAND">Local brand</ng-option>
+          <ng-option value="OTHER">Other</ng-option>
+
+          <!-- <ng-option>Local brand </ng-option> -->
+        </ng-select>
+        <label>What is your business category?</label>
+        <ng-select
+          placeholder="Eg. Startup, Local brand, etc."
+          [(ngModel)]="userInfo.field"
+        >
+          <ng-container *ngFor="let category of categories">
+            <ng-option [value]="category.id">{{
+              category.displayName
+            }}</ng-option>
+          </ng-container>
+          <!-- <ng-option>Local brand </ng-option> -->
+        </ng-select>
+
+        <mat-label>Description</mat-label>
+        <textarea
+          class="form-control mt-4"
+          placeholder="Tell us more about yourself, your experience, your goals. "
+          rows="5"     [(ngModel)]="userInfo.bio"
+        ></textarea>
+
+        <button (click)="submit()" class="continueButton" mat-button>
+          Save
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="col-md-auto ">
+  <h1>add category</h1>
+  <div class="formGroup">
+    <mat-label>Upload profile picture</mat-label>
+    <div class="row mb-4 mt-4 mx-2">
+      <div class="col-md-4 uploadFileImgContainer">
+        <label for="fileCategory">
+          <img [src]="categoryImgUrl" />
+        </label>
+      </div>
+
+      <div class="col-md-4 d-flex align-items-center">
+        <label for="fileCategory"> Select a file</label>
+
+        <!-- <input type="file" accept=".jpg,.jpeg,.png" /> -->
+      </div>
+      <div class="col-md-4">
+        <input
+          type="file"
+          name="file"
+          (change)="onCategoryFileSelected($event)"
+          id="fileCategory"
+          class="inputfile"
+          style="opacity: 0"
+          accept="image/*"
+        />
+      </div>
+    </div>
+    <label >category name</label>
+    <input
+      type="text"
+
+      [(ngModel)]="categoryName"
+      class="form-control"
+      placeholder="category name"
+    />
+    <label >category display name</label>
+    <input
+      type="text"
+
+      [(ngModel)]="categoryDisplayName"
+      class="form-control"
+      placeholder="category display name"
+    />
+    <button (click)="addCategory()" class="continueButton" mat-button>
+      Add category
+    </button>
+  </div>
+</div>
+<!-- </div> -->
